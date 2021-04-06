@@ -6,16 +6,16 @@ class SessionsController < ApplicationController
             login!(@user)
             render 'api/users/show'
         else
-            render json: ['Invalid Credentials'], status: 401
+            render json: ['Invalid email/pssword '], status: 401
         end
     end
 
     def destroy
         if @current_user
             logout!
-            render json: {}
+            render 'api/users/show'
         else
-            render json: ['Already logged out']
+            render json: ['Already logged out'], status: 404
         end
     end
 
