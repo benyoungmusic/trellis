@@ -1,0 +1,75 @@
+.logout-navbar {
+    display: flex;
+    justify-content: flex-end;
+    // padding: 2%;
+    box-shadow: 0px 3px 8px rgba(128, 128, 128, 0.445);
+}
+
+.logout-navbar * {
+    margin-top: 1rem;
+    margin-right: .8rem;
+    // margin-bottom: 1rem;
+    padding: 10px;
+    padding-top: 11px;
+    padding-bottom: 10px;
+    font-family: 'PT Sans', serif;
+    // font-family: Verdana, Helvetica, Arial, sans-serif;
+    font-size: 105%;
+    text-decoration: none;
+    letter-spacing: .75px;
+}
+
+.logout-nav-trellis {
+    // text-shadow: 1px 1px 1px rgb(0, 0, 0);
+    margin-right: auto;
+    margin-top: .7rem;
+    margin-left: .8rem;
+    font-size: 35px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    color: rgb(48, 48, 48);
+}
+
+.logout-navbar .sign-up {
+    background-color: rgb(0, 119, 255);
+    color: white;
+    font-weight: 800;
+    font-family: 'PT Sans Caption', serif;
+    // text-shadow: .6px .6px 1px white;
+    border-radius: 4px;
+    letter-spacing: 0px;
+    height: 15px;
+}
+
+.logout-navbar .log-in {
+    color:  rgb(0, 107, 230);
+    font-family: 'PT Sans Caption', serif;
+    // text-shadow: .2px .2px 1px rgb(0, 119, 255);
+    font-weight: 400;
+    letter-spacing: 0px;
+}
+
+.tag-line-1 {
+    font-size: 42px;
+    font-family: 'PT Sans Caption', serif;
+    // font-family: 'PT Sans', serif;
+    font-weight: 600;
+    // letter-spacing: 1.2px;
+    line-height: 70px;
+}
+
+.home p {
+    font-size: 19px;
+    font-family: 'PT Sans Caption', serif;
+    line-height: 30px;
+
+}
+
+.tag-line-2 {
+    font-size: 34px;
+    font-family: 'Nanum Gothic', serif;
+    // font-family: 'PT Sans', serif;
+    font-weight: 600;
+    line-height: 48px;
+    margin-bottom: 10px;
+}
