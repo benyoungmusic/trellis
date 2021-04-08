@@ -1,3 +1,92 @@
 // Place all the styles related to the Sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.session-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.session-form .session-form-logo {
+    font-family: 'PT Sans', serif;
+    font-size: 50px;
+    letter-spacing: 1.5px;
+    color: rgb(48, 48, 48);
+    font-weight: 900;
+    margin: 37.5px;
+}
+
+.session-form * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.session-form .session-container {
+    display: flex;
+    box-shadow: 0px 3px 15px rgba(128, 128, 128, 0.445);
+    width: 400px;
+    // height: 675px;
+    justify-content: space-around;
+    // align-items: center;
+    flex-direction: column;
+}
+
+.session-container * {
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.container-header {
+    font-size: 18px;
+    font-family: 'PT Sans', serif;
+    font-weight: 600;
+    color: rgba(77, 77, 83, 0.829);
+    margin: 12px;
+    margin-top: 33px;
+
+}
+
+.session-form-container * {
+    margin: 11.5px;
+    height: 34px;
+    border: 2px solid rgb(224, 224, 224);
+    background-color: rgba(204, 204, 204, 0.11);
+    border-radius: 3px;
+    width: 315px;
+    // flex-direction: column;
+    // justify-content: space-around;
+}
+
+.session-form-container .signup-button {
+    background-color: rgb(0, 119, 255);
+    border: 2px solid rgb(0, 119, 255);
+    color: white;
+    font-size: 15px;
+    margin-bottom: 50px;
+}
+
+.session-form-container .continue-button {
+    background-color: rgb(224, 224, 224);
+    color: rgb(131, 131, 131);
+    font-size: 15px;
+    font-weight: 900;
+    margin-bottom: 50px;
+    width: 315px;
+}
+
+.session-form-container .login-button {
+    background-color: rgb(224, 224, 224);
+    color: rgb(131, 131, 131);
+    font-size: 15px;
+    font-weight: 900;
+    margin-bottom: 50px;
+    width: 315px;
+}
+
+.session-form-container input[type=text]:focus {
+    border: 2px solid rgb(179, 179, 255);
+}

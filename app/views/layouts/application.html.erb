@@ -10,7 +10,13 @@
     <%# <link rel="stylesheet" href="https: fonts.googleapis.com/css?family=Nanum+Gothic"> %>
     <%# <link rel="stylesheet" href="https: fonts.googleapis.com/css?family=PT+Sans"> %>
     <%# <link rel="stylesheet" href="https: fonts.googleapis.com/css?family=PT+Sans+Caption"> %>
-
+    <% if logged_in? %>
+      <script type="text/javascript">
+          window.currentUser = {
+          "currentUserId": <%= current_user.id %>
+          }
+      </script>
+    <% end %>
   </head>
 
   <body>
