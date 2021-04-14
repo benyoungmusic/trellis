@@ -5,6 +5,11 @@ class User < ApplicationRecord
     validates :session_token, presence: true, uniqueness: true
     validates :password, length: { minimum: 8, allow_nil: true }
 
+    has_many :boards,
+        class_name: :Board,
+        foreign_key: :author_id
+
+
     attr_reader :password
     after_initialize :ensure_session_token
 

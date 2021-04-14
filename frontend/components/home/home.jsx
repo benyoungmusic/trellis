@@ -1,6 +1,7 @@
 import React from 'react';
 import LogoutNavBar from './logout_home_navbar';
 import { Route, Link } from 'react-router-dom';
+import BoardIndexContainer from '../boards/board_index_container';
 
 const Home = ({ currentUser, logout }) => {
 
@@ -29,6 +30,8 @@ const Home = ({ currentUser, logout }) => {
         <div>
             <h1>Log In Home</h1>
             <button onClick={logout}>Log Out</button>
+            <h1>Boards</h1>
+            <BoardIndexContainer />
         </div>
     );
 
