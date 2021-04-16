@@ -9,6 +9,10 @@ class User < ApplicationRecord
         class_name: :Board,
         foreign_key: :author_id
 
+    has_many :lists,
+        class_name: :List,
+        foreign_key: :author_id
+
 
     attr_reader :password
     after_initialize :ensure_session_token

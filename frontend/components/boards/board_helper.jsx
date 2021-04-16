@@ -2,7 +2,6 @@ import React from 'react';
 import BoardItem from './board_item';
 
 const mappedItems = ({ boards }) => {
-    console.log(boards)
     const boardMap = () => (
         boards.map(board => (
             <BoardItem

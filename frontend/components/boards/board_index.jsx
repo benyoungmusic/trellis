@@ -9,7 +9,8 @@ class BoardIndex extends React.Component {
         super(props);
 
         this.state = {
-            createModal: "closed-modal"
+            createModal: "closed-modal",
+            overlay: "no-overlay"
         }
         this.showModal = this.showModal.bind(this);
         this.hideModal = this.hideModal.bind(this);
@@ -22,7 +23,8 @@ class BoardIndex extends React.Component {
 
     showModal () {
         this.setState({
-            createModal: "open-modal"
+            createModal: "open-modal",
+            overlay: "modal-grey-area"
         }, () => {
             document.addEventListener("click", this.closeMenu)
         })
@@ -30,7 +32,8 @@ class BoardIndex extends React.Component {
 
     hideModal () {
         this.setState({
-            createModal: "closed-modal"
+            createModal: "closed-modal",
+            overlay: "no-overlay"
         })
     }
 
@@ -39,7 +42,7 @@ class BoardIndex extends React.Component {
         const { boards } = this.props;
         return (
             <div>
-                <ul>
+                <ul className="board-list">
                     {
                         boards.map(board => (
                             <BoardItem
@@ -48,11 +51,14 @@ class BoardIndex extends React.Component {
                             )
                         )
                     }
+                    <div className="create-board-button" onClick={this.showModal}>
+                        <h3 className="create-board-text">Create new board</h3>
+                    </div>
                 </ul>
-                <div onClick={this.showModal}>Create new board
+                <div className="modal-container">
                     <CreateBoardModal createModal={this.state.createModal}/>
                 </div>
-                <div onClick={this.hideModal}  className="modal-grey-area">
+                <div onClick={this.hideModal}  className={this.state.overlay}>
                     {/* <div className={this.state.createModal}>I'm a modal</div> */}
                 </div>
             </div>

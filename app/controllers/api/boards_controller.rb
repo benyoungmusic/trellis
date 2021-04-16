@@ -35,8 +35,8 @@ class Api::BoardsController < ApplicationController
 
     def destroy
         @board = Board.find_by(id: params[:id])
-        if @chirp.destroy
-            render :show
+        if @board.destroy
+            render :index
         else
             render json: ["Board does not exist"]
         end

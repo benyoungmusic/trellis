@@ -21,17 +21,21 @@ const Home = ({ currentUser, logout }) => {
             features as your teamwork and ability to do more stuff grows. 
             Manage stuff, organize stuff, and build team spirit—all stuffed into 
             one place.</p>
-            <Link to="/login" className="log-in">Start doing stuff →</Link>
+            <Link to="/signup" className="log-in-2">Start doing stuff →</Link>
 
         </div>
     );
 
     const logInHome = () => (
         <div>
-            <h1>Log In Home</h1>
-            <button onClick={logout}>Log Out</button>
-            <h1>Boards</h1>
-            <BoardIndexContainer />
+            <div className="login-navbar">
+                <h1 className="login-navbar-trellis">Trellis</h1>
+                <button className="login-navbar-logout" onClick={logout}>Log Out</button>
+            </div>
+            <div className="board-index">
+                <h1 className="board-index-header">Personal Boards</h1>
+                <BoardIndexContainer />
+            </div>
         </div>
     );
 

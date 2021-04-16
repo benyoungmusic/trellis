@@ -5,4 +5,8 @@ class Board < ApplicationRecord
         class_name: :User,
         foreign_key: :author_id
 
+    has_many :lists,
+        class_name: :List,
+        foreign_key: :board_id
+
 end

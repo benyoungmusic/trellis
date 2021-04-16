@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     end
 
     resources :boards
+    resources :lists
 
     resource :session, only: [:create, :destroy]
   end

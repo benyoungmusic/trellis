@@ -1,9 +1,10 @@
 import { combineReducers } from 'redux';
-
-import users from './users_reducer';
-import boards from './boards_reducer';
+import ListsReducer from './lists_reducer';
+import UsersReducer from './users_reducer';
+import BoardsReducer from './boards_reducer';
 
 export default combineReducers({
-    users,
-    boards
+    users: UsersReducer,
+    boards: BoardsReducer,
+    lists: ListsReducer
 });
