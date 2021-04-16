@@ -7,7 +7,6 @@ import {
 const BoardsReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
     let nextState = Object.assign({}, oldState);
-    console.log(action)
     switch (action.type) {
         case RECEIVE_BOARDS:
             return action.boards

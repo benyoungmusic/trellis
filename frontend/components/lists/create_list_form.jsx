@@ -9,7 +9,6 @@ class CreateListForm extends React.Component {
         this.state.board_pos = this.props.boardPos + 1
         this.handleSubmit = this.handleSubmit.bind(this);
         this.update = this.update.bind(this);
-        console.log(this.state.board_id)
     }
 
     componentDidMount() {
@@ -23,7 +22,6 @@ class CreateListForm extends React.Component {
     }
 
     handleSubmit() {
-        console.log(this.props)
         this.state.board_pos = Object.keys(this.props.lists).length + 1
         this.props.submitList(this.state);
     }

@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom';
 class ListIndex extends React.Component {
     constructor(props) {
         super(props);
-        console.log(props);
         this.state = {
             boardId: this.props.match.params.boardId
         }
