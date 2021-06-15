@@ -8,18 +8,19 @@ import { Link } from 'react-router-dom';
 class ListIndex extends React.Component {
     constructor(props) {
         super(props);
-        console.log(props);
         this.state = {
-            boardId: this.props.match.params.boardId
+            board_id: this.props.match.params.boardId
         }
+        console.log(this.state.board_id);
     }
 
     componentDidMount() {
-        this.props.requestLists(this.state.boardId);
+        this.props.requestLists(this.state.board_id);
     }
 
     render() {
         const { lists } = this.props;
+        console.log(this.props)
         return (
             <div className="board-page-div">
                 <div className="lists-navbar">

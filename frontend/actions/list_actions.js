@@ -26,8 +26,8 @@ const removeList = listId => {
     }
 };
 
-export const requestLists = boardId => dispatch => {
-    return ListAPIUtil.fetchLists(boardId)
+export const requestLists = board_id => dispatch => {
+    return ListAPIUtil.fetchLists(board_id)
         .then(lists => dispatch(receiveLists(lists)))
 }
 

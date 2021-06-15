@@ -1,8 +1,8 @@
-export const fetchLists = boardId => (
+export const fetchLists = board_id => (
     $.ajax({
         method: 'GET',
         url: `api/lists`,
-        data: { boardId: boardId }
+        data: { board_id: board_id }
     })
 );
 

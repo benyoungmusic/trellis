@@ -11,7 +11,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-    requestLists: boardId => dispatch(requestLists(boardId)),
+    requestLists: board_id => dispatch(requestLists(board_id)),
     logout: () => dispatch(logout())
 });
 
