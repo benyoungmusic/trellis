@@ -38,7 +38,7 @@ export const requestList = listId => dispatch => {
 
 export const createList = list => dispatch => {
     return ListAPIUtil.createList(list)
-        .then(lists => dispatch(receiveLists(lists)))
+        .then(list => dispatch(receiveList(list)))
 }
 
 export const updateList = list => dispatch => {

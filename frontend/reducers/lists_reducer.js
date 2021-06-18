@@ -12,8 +12,8 @@ const ListsReducer = (oldState = {}, action) => {
         case RECEIVE_LISTS:
             return action.lists
         case RECEIVE_LIST:
-            console.log("event", action.event)
-            nextState[action.list.id] = action.event;
+            console.log("action", action)
+            nextState[action.list.id] = action.list;
             return nextState;
         case REMOVE_LIST:
             let nextStateArr = Object.keys(nextState).map(key => nextState[key]);

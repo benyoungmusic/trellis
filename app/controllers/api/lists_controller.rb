@@ -4,7 +4,7 @@ class Api::ListsController < ApplicationController
         @list = List.new(list_params)
         @list.author_id = current_user.id
         if @list.save
-            render :index
+            render :show
         else
             render json: @list.errors.full_messages, status: 422
         end
