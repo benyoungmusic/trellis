@@ -9,18 +9,25 @@ class ListIndex extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            board_id: this.props.match.params.boardId
+            board_id: this.props.match.params.boardId,
+            lists: this.props.lists
         }
         console.log(this.state.board_id);
+
+        this.handleDeleteList = this.handleDeleteList.bind(this);
     }
 
     componentDidMount() {
+        console.log("didmount")
         this.props.requestLists(this.state.board_id);
+    }
+
+    handleDeleteList(listId) {
+        this.props.deleteList(listId)
     }
 
     render() {
         const { lists } = this.props;
-        console.log(this.props)
         return (
             <div className="board-page-div">
                 <div className="lists-navbar">
@@ -33,12 +40,13 @@ class ListIndex extends React.Component {
                         lists.map(list => (
                             <ListItem
                                 key={`list${list.id}`}
-                                list={list}/>
+                                list={list}
+                                deleteList={this.handleDeleteList}/>
                             )
                         )
                     }
                     <CreateListFormContainer
-                        boardId={this.state.boardId}
+                        boardId={parseInt(this.state.board_id)}
                         boardPos={Object.keys(lists).length + 1}
                     />
                 </ul>

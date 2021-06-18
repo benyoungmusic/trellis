@@ -9,12 +9,12 @@ class CreateListForm extends React.Component {
         this.state.board_pos = this.props.boardPos + 1
         this.handleSubmit = this.handleSubmit.bind(this);
         this.update = this.update.bind(this);
-        console.log(this.state.board_id)
+        console.log("state.boardid in constructor", this.props.boardId)
     }
 
-    componentDidMount() {
-        this.props.requestLists(this.state.boardId);
-    }
+    // componentDidMount() {
+    //     this.props.requestLists(this.state.boardId);
+    // }
 
     update() {
         return (e) => {
@@ -23,7 +23,7 @@ class CreateListForm extends React.Component {
     }
 
     handleSubmit() {
-        console.log(this.props)
+        console.log("createlistform state",this.state)
         this.state.board_pos = Object.keys(this.props.lists).length + 1
         this.props.submitList(this.state);
     }

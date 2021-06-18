@@ -1,6 +1,6 @@
 class List < ApplicationRecord
     validates :title, :author_id, :board_id, presence: true
-    validates :board_pos, presence: true, uniqueness: true
+    validates :board_pos, presence: true
 
     belongs_to :author,
         class_name: :User,

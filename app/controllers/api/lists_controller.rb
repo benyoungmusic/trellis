@@ -20,7 +20,7 @@ class Api::ListsController < ApplicationController
     end
 
     def index
-        @lists = List.where(board_id: params[:boardId])
+        @lists = List.where(board_id: params[:board_id])
         render :index
     end
 
