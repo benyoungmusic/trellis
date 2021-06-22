@@ -11,10 +11,6 @@ class CreateListForm extends React.Component {
         this.update = this.update.bind(this);
     }
 
-    // componentDidMount() {
-    //     this.props.requestLists(this.state.boardId);
-    // }
-
     update() {
         return (e) => {
             this.setState({ title: e.currentTarget.value })

@@ -5,7 +5,8 @@ import { logout } from '../../actions/session_actions';
 import { connect } from 'react-redux';
 
 const mapStateToProps = (state) => ({
-    currentUserId: state.session.currentUserId
+    currentUserId: state.session.currentUserId,
+    cards: Object.keys(state.entities.cards).map(key => state.entities.cards[key])
 });
 
 const mapDispatchToProps = (dispatch) => ({

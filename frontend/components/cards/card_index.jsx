@@ -7,8 +7,9 @@ class CardIndex extends React.Component {
   }
 
   render() {
-    const { cards } = this.props;
-    console.log("card index props: ", this.props)
+    let cards = this.props.cards.filter(card => card.list_id = this.props.list_id);
+    console.log("card index cards: ", cards)
+
     return (
       <div className="card-index-div">
         <h3>{this.props.list_id}</h3>

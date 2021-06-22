@@ -3,6 +3,7 @@ import CardIndexContainer from '../cards/card_index_container';
 import CreateCardFormContainer from '../cards/create_card_form_container'
 
 export default ({ list, deleteList, board_id, cards }) => {
+    console.log("list item boardId", board_id)
 
     return (
         <li className="list-item">
@@ -10,8 +11,7 @@ export default ({ list, deleteList, board_id, cards }) => {
             <button className="delete-list-button" onClick={() => {deleteList(list.id)}}>X</button>
             <CardIndexContainer
                 list_id={list.id}
-                board_id={board_id}
-                cards={cards}/>
+                board_id={board_id}/>
             <CreateCardFormContainer
                 board_id={board_id}
                 cards={cards}

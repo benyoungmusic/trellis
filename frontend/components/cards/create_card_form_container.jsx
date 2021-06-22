@@ -7,6 +7,7 @@ const mapStateToProps = state => ({
         title: '',
         author_id: state.session.currentUserId,
     },
+    cards: Object.keys(state.entities.cards).map(key => state.entities.cards[key])
 })
 
 const mapDispatchToProps = dispatch => ({

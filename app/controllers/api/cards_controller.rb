@@ -1,4 +1,4 @@
-class CardsController < ApplicationController
+class Api::CardsController < ApplicationController
 
   def create
     @card = Card.new(card_params)
@@ -45,6 +45,6 @@ class CardsController < ApplicationController
   private
 
   def card_params
-    params.require(:card).permit(:title, :author_id, :board_id, :list_id, :description)
+    params.require(:card).permit(:title, :author_id, :board_id, :list_id, :list_pos, :description)
   end
 end

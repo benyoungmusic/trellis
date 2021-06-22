@@ -8,7 +8,7 @@ class CreateCardForm extends React.Component {
       author_id: this.props.card.author_id,
       board_id: this.props.board_id,
       list_id: this.props.list_id,
-      card_pos: this.props.cards.length + 1
+      list_pos: this.props.cards.filter(card => card.board_id = this.props.match.params.boardId).length + 1
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -23,6 +23,7 @@ class CreateCardForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    console.log("card state", this.state)
     let prevCardPos = this.state.card_pos;
     this.props.submitCard(this.state);
     this.setState({ title: '', card_pos: (prevCardPos + 1) });
@@ -40,7 +41,7 @@ class CreateCardForm extends React.Component {
             placeholder="Enter a title for this card..."
             onChange={this.update()}/>
         </div>
-        <button className="create-card-button">
+        <button className="create-card-button" onClick={this.handleSubmit}>
           <h3 className="create-card-button-title">Add card</h3>
         </button>
       </form>
