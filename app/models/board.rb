@@ -9,4 +9,8 @@ class Board < ApplicationRecord
         class_name: :List,
         foreign_key: :board_id
 
+    has_many :cards,
+        class_name: :Card,
+        foreign_key: :board_id
+
 end

@@ -7,12 +7,10 @@ import {
 const ListsReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
     let nextState = Object.assign({}, oldState);
-    console.log("list reducer action", action)
     switch (action.type) {
         case RECEIVE_LISTS:
             return action.lists
         case RECEIVE_LIST:
-            console.log("action", action)
             nextState[action.list.id] = action.list;
             return nextState;
         case REMOVE_LIST:

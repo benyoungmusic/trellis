@@ -9,7 +9,6 @@ class CreateListForm extends React.Component {
         this.state.board_pos = this.props.boardPos + 1
         this.handleSubmit = this.handleSubmit.bind(this);
         this.update = this.update.bind(this);
-        console.log("createlistform state", this.state)
     }
 
     // componentDidMount() {
@@ -26,7 +25,7 @@ class CreateListForm extends React.Component {
         e.preventDefault();
         this.state.board_pos = Object.keys(this.props.lists).length + 1
         this.props.submitList(this.state);
-        this.setState({ title: '' })
+        this.setState({ title: '' });
         document.getElementById("list-title-field").focus()
     }
 

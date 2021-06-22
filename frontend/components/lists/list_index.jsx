@@ -10,9 +10,9 @@ class ListIndex extends React.Component {
         super(props);
         this.state = {
             board_id: this.props.match.params.boardId,
-            lists: this.props.lists
+            lists: this.props.lists,
+            cards: this.props.cards.filter(card => card.board_id = this.props.match.params.boardId)
         }
-        console.log(this.state.board_id);
 
         this.handleDeleteList = this.handleDeleteList.bind(this);
     }
@@ -20,6 +20,7 @@ class ListIndex extends React.Component {
     componentDidMount() {
         console.log("didmount")
         this.props.requestLists(this.state.board_id);
+        this.props.requestCardsByBoard(this.state.board_id);
     }
 
     handleDeleteList(listId) {
@@ -28,6 +29,7 @@ class ListIndex extends React.Component {
 
     render() {
         const { lists } = this.props;
+        console.log("list props", this.props)
         return (
             <div className="board-page-div">
                 <div className="lists-navbar">
@@ -41,7 +43,9 @@ class ListIndex extends React.Component {
                             <ListItem
                                 key={`list${list.id}`}
                                 list={list}
-                                deleteList={this.handleDeleteList}/>
+                                deleteList={this.handleDeleteList}
+                                board_id={parseInt(this.state.board_id)}
+                                cards={this.state.cards}/>
                             )
                         )
                     }

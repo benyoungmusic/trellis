@@ -13,6 +13,10 @@ class User < ApplicationRecord
         class_name: :List,
         foreign_key: :author_id
 
+    has_many :cards,
+        class_name: :Card,
+        foreign_key: :author_id
+
 
     attr_reader :password
     after_initialize :ensure_session_token
