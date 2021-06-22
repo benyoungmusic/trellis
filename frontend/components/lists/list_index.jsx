@@ -18,7 +18,6 @@ class ListIndex extends React.Component {
     }
 
     componentDidMount() {
-        console.log("didmount")
         this.props.requestLists(this.state.board_id);
         this.props.requestCardsByBoard(this.state.board_id)
             .then(console.log("cards", this.props.cards))
@@ -30,7 +29,6 @@ class ListIndex extends React.Component {
 
     render() {
         const { lists } = this.props;
-        console.log("list state", this.state)
         return (
             <div className="board-page-div">
                 <div className="lists-navbar">

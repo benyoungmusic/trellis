@@ -23,7 +23,6 @@ class CreateCardForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log("card state", this.state)
     let prevCardPos = this.state.card_pos;
     this.props.submitCard(this.state);
     this.setState({ title: '', card_pos: (prevCardPos + 1) });

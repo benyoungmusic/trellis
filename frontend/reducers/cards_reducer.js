@@ -7,7 +7,6 @@ import {
 const CardsReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
     let nextState = Object.assign({}, oldState);
-    console.log("card reducer action", action)
     switch (action.type) {
         case RECEIVE_CARDS:
             return action.cards

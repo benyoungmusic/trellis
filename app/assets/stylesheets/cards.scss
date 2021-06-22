@@ -1,3 +1,16 @@
 // Place all the styles related to the Cards controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.card-button {
+  background-color: white;
+  border-style: solid;
+  border-width: 0px;
+  border-radius: 3px;
+  margin: 10px;
+  margin-top: 0px;
+  box-sizing: border-box;
+  width: 275px;
+  text-align: left;
+  box-shadow: 0px 1px #a8afba;
+  }

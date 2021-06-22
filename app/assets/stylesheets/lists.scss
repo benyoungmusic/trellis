@@ -62,27 +62,40 @@
 }
 
 .list-item {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: white;
-    height: 80px;
-    width: 275px;
+    background-color: #ededed;
     border-radius: 5px;
     margin-right: 10px;
+}
+
+.list-item-div {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    width: 275px;
 }
 
 .list-item-title {
     text-decoration: none;
     font-family: 'PT Sans', serif;
     color: rgb(27, 27, 27);
-    margin: 17px;
-    height: 90px;
+    margin: 5px;
+    margin-left: 15px;
+    margin-top: 15px;
+    height: 20px;
     font-size: 15px;
     font-weight: 600;
 }
 
+.delete-list-button {
+    margin: 5px;
+    margin-top: 17px;
+    height: 20px;
+    text-align: right;
+    align-items: flex-end;
+}
+
 .create-list-form {
-    background-color: white;
+    background-color: #ededed;
     border-radius: 3px;
 }
 
