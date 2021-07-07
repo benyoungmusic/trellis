@@ -8,7 +8,7 @@ class CreateCardForm extends React.Component {
       author_id: this.props.card.author_id,
       board_id: this.props.board_id,
       list_id: this.props.list_id,
-      list_pos: this.props.cards.filter(card => card.board_id = this.props.match.params.boardId).length + 1
+      list_pos: this.props.cards.filter(card => card.list_id = this.props.list_id).length + 1
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -23,9 +23,9 @@ class CreateCardForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    let prevCardPos = this.state.card_pos;
+    let prevCardPos = this.state.list_pos;
     this.props.submitCard(this.state);
-    this.setState({ title: '', card_pos: (prevCardPos + 1) });
+    this.setState({ title: '', list_pos: (prevCardPos + 1) });
     document.getElementById("card-title-field").focus()
   }
 

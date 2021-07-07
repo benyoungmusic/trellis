@@ -2,7 +2,7 @@ import React from 'react';
 import CardIndexContainer from '../cards/card_index_container';
 import CreateCardFormContainer from '../cards/create_card_form_container'
 
-export default ({ list, deleteList, board_id, cards }) => {
+export default ({ list, deleteList, board_id, cards, startdrag, enterdrag, enddrag }) => {
 
     return (
         <li className="list-item">
@@ -13,7 +13,10 @@ export default ({ list, deleteList, board_id, cards }) => {
             <div className="card-index-div">
                 <CardIndexContainer
                     list_id={list.id}
-                    board_id={board_id}/>
+                    board_id={board_id}
+                    startdrag={startdrag}
+                    enterdrag={enterdrag}
+                    enddrag={enddrag}/>
                 <CreateCardFormContainer
                     board_id={board_id}
                     cards={cards}

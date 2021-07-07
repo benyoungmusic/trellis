@@ -1,6 +1,6 @@
 import React from 'react';
 import CardIndex from './card_index';
-import { requestCardsByBoard, deleteCard } from '../../actions/card_actions';
+import { requestCardsByBoard, deleteCard, updateCard } from '../../actions/card_actions';
 import { logout } from '../../actions/session_actions';
 import { connect } from 'react-redux';
 
@@ -13,6 +13,7 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
     requestCardsByBoard: board_id => dispatch(requestCardsByBoard(board_id)),
     deleteCard: card_id => dispatch(deleteCard(card_id)),
+    updateCard: card => dispatch(updateCard(card)),
     logout: () => dispatch(logout())
 });
 

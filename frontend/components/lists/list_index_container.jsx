@@ -1,7 +1,7 @@
 import React from 'react';
 import ListIndex from './list_index';
 import { requestLists, deleteList } from '../../actions/list_actions';
-import { requestCardsByBoard } from '../../actions/card_actions';
+import { requestCardsByBoard, updateCard } from '../../actions/card_actions';
 import { logout } from '../../actions/session_actions';
 import { connect } from 'react-redux';
 
@@ -16,7 +16,8 @@ const mapDispatchToProps = (dispatch) => ({
     requestLists: board_id => dispatch(requestLists(board_id)),
     requestCardsByBoard: board_id => dispatch(requestCardsByBoard(board_id)),
     deleteList: list_id => dispatch(deleteList(list_id)),
-    logout: () => dispatch(logout())
+    logout: () => dispatch(logout()),
+    updateCard: card => dispatch(updateCard(card)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ListIndex);

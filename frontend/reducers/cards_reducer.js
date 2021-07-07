@@ -9,7 +9,9 @@ const CardsReducer = (oldState = {}, action) => {
     let nextState = Object.assign({}, oldState);
     switch (action.type) {
         case RECEIVE_CARDS:
-            return action.cards
+            let cardsObject = {}
+            action.cards.forEach(card => cardsObject[card.id] = card)
+            return cardsObject
         case RECEIVE_CARD:
             nextState[action.card.id] = action.card;
             return nextState;
