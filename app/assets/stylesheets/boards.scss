@@ -60,6 +60,7 @@
 .board-list {
     display: flex;
     margin-top: 11px;
+    flex-wrap: wrap;
 }
 
 .board-list * {
@@ -97,6 +98,7 @@
 .board-list li {
     margin: 0px;
     margin-right: 12px;
+    margin-bottom: 8px;
 }
 
 .modal-container {

@@ -4,6 +4,7 @@ import CreateListFormContainer from './create_list_form_container';
 import { Redirect } from 'react-router';
 import { Link } from 'react-router-dom';
 import CardModal from '../cards/card_modal'
+// import houseIcon from './house.svg'
 
 
 class ListIndex extends React.Component {
@@ -102,6 +103,9 @@ class ListIndex extends React.Component {
             <div className="board-page-div">
                 <div className="lists-navbar">
                     <h1 className="lists-navbar-trellis">Trellis</h1>
+                    <Link to="/" className="lists-navbar-home">
+                        {/* <img src={houseIcon} alt="Home"/> */}
+                    </Link>
                     <Link className="lists-navbar-logout" onClick={this.props.logout} to="/">Log Out</Link>
                     {/* <button className="lists-navbar-logout" onClick={handleLogout()}>Log Out</button> */}
                 </div>

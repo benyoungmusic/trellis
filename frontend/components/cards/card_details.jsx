@@ -8,10 +8,12 @@ class CardDetails extends React.Component {
     super(props);
     this.state = {
       cards: this.props.cards,
-      description: ""
+      description: "",
+      detailsForm: "closed"
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
+    this.DBoxSubmit = this.DBoxSubmit.bind(this);
   }
 
   update() {
@@ -25,11 +27,39 @@ class CardDetails extends React.Component {
     const card = this.props.cards[cardId];
     card.description = this.state.description;
     this.props.updateCard(card)
+    this.setState({ detailsForm: "closed" })
   }
 
   componentDidMount() {
     this.props.requestCard(this.props.match.params.cardId)
       .then(() => {this.setState()})
+  }
+
+  DBoxSubmit() {
+    this.setState({ description: "Add a more detailed description...", detailsForm: "open" })
+  }
+
+  descriptionBox() {
+    const cardId = this.props.match.params.cardId
+    const card = this.props.cards[cardId]
+    const placeholder = card.description ? card.description : "Add a more detailed description..."
+    if (this.state.detailsForm === "closed") {
+      return (
+        <button className="open-description-form-button" onClick={this.DBoxSubmit}>
+          {placeholder}
+        </button>
+      )
+    } else {
+      return (
+        <form className="card-details-form">
+          <input type="text" className="card-description-textbox"
+          placeholder={placeholder}
+          onChange={this.update()}/>
+          <button className="card-description-submit"
+          onClick={this.handleSubmit}>Save</button>
+        </form>
+      )
+    }
   }
 
   cardDetailsRender() {
@@ -48,13 +78,7 @@ class CardDetails extends React.Component {
             <div className="card-details">
               <h3 className="card-details-title">{card.title}</h3>
               <h3 className="card-details-description-header">Description</h3>
-              <form>
-                <input type="text" className="card-description-textbox"
-                placeholder={placeholder}
-                onChange={this.update()}/>
-                <button className="card-description-submit"
-                onClick={this.handleSubmit}>Save</button>
-              </form>
+              {this.descriptionBox()}
             </div>
           </div>
           <Link to={`/board/${card.board_id}`} className="modal-grey-area">

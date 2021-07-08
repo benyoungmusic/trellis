@@ -84,8 +84,8 @@
   }
   
   .card-details {
-    width: 780px;
-    height: 780px;
+    width: 100%;
+    height: 100%;
     padding: 20px;
   }
 
@@ -97,7 +97,7 @@
   .card-details-description-header {
     font-family: 'PT Sans', serif;
     font-size: 15px;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 20px;
   }
 
@@ -119,4 +119,15 @@
 
   .modal-grey-area {
     cursor: default;
+  }
+
+  .card-details-form {
+    padding-bottom: 30px;
+  }
+
+  .open-description-form-button {
+    display: block;
+    width: 608px;
+    height: 50px;
+    margin-bottom: 74px;
   }

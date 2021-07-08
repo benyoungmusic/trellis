@@ -1,4 +1,10 @@
+.home {
+    background: rgb(225,221,255);
+    background: linear-gradient(rgba(225,221,255,1) 0%, rgba(255,255,255,1) 100%, rgba(0,212,255,1) 100%);
+}
+
 .logout-navbar {
+    background-color: white;
     display: flex;
     justify-content: flex-end;
     // padding: 2%;
