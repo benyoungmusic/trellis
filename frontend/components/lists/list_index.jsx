@@ -104,6 +104,7 @@ class ListIndex extends React.Component {
                 <div className="lists-navbar">
                     <h1 className="lists-navbar-trellis">Trellis</h1>
                     <Link to="/" className="lists-navbar-home">
+                        Home
                         {/* <img src={houseIcon} alt="Home"/> */}
                     </Link>
                     <Link className="lists-navbar-logout" onClick={this.props.logout} to="/">Log Out</Link>

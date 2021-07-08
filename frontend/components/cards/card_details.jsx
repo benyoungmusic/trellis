@@ -69,7 +69,6 @@ class CardDetails extends React.Component {
       const cardId = this.props.match.params.cardId
       const card = this.props.cards[cardId]
       const placeholder = card.description ? card.description : "Add a more detailed description..."
-      console.log("card :", card)
       return (
         <div className="card-details-div">
           <ListIndexContainer
